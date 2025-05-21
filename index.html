@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- import jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+  
+</head>
+
+<body>
+    <div id="start-screen">
+      <button class="start">Start Game</button>
+    </div>
+
+    <div id="difficulty-screen" style="display: none;">
+    <button class="easy">Easy</button>
+    <button class="medium">Medium</button>
+    <button class="hard">Hard</button>
+  </div>
+
+  <div id="game-screen" style="display: none;">
+    <button class="easy">Easy</button>
+    <button class="medium">Medium</button>
+    <button class="hard">Hard</button>
+ 
+    <button class="reset" style='font-size:16px'>Reset</button>
+    <div id="timer"></div>
+    <div id="powerup">P</div>
+    <div id="black"></div>
+    <div id="purple"></div>
+    <div id="yellow"></div>
+    <div id="orange"></div>
+    <div id="green"></div>
+    <div id="whiteBox">
+    <div id="matchedPairs"></div>
+    <div id="pairsRemaining"></div>
+    <div id="count"></div>
+  </div>
+    <div id="game_grid" style="display: none;"></div>
+  </div>
+
+  <div id="victory_page" style="display: none;">
+    <div id="message"></div>
+    <button class="reset" style='font-size:16px'>Play Again</button>
+  </div>
+
+  <div id="losing_page" style="display: none;">
+    <div id="loseMessage"></div>
+    <button class="reset" style='font-size:16px'>Try Again</button>
+  </div>
+
+  </div>
+
+
+  
+  <script src="index.js"></script>
+</body>
+
+</html>

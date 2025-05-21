@@ -1,0 +1,431 @@
+body {
+  margin: 0px;
+}
+
+#game-screen {
+  width: 100%;
+  height: 100vh;
+  max-width: 100%;
+  overflow-x: hidden;
+  background-image: url(pokeWallpaper.webp);
+}
+
+#game_grid {
+  border: 2px tomato solid;
+  width: 600px;
+  height: auto;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+  background-color: white;
+  margin-top: -10%;
+  
+}
+
+#whiteBox {
+  background-color: white;
+  border: #333;
+  width: 6%;
+  right: 20%;
+  
+}
+
+#victory_page {
+  width: 100%;
+  height: 100vh;
+  background-image: url(poke_victory.jpg);
+}
+
+#victory_page .reset {
+  background-color: grey;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 2px;
+  margin: 3px 2px;
+  top: 30%;
+  bottom: 50%;
+  position: relative;
+  right: -60%;
+}
+
+#losing_page {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+}
+
+#losing_page .reset {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 2px;
+  margin: 3px 2px;
+  top: 30%;
+  bottom: 50%;
+  position: relative;
+  right: -60%;
+}
+
+#loseMessage {
+  font-size: 30px;
+  top:15%;
+  right: -40%;
+  color: white;
+  border: white;
+}
+
+#message {
+  font-size: 30px;
+  top:15%;
+  margin-left: 55%;
+}
+
+#matchedPairs {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 20px;
+  color: #333;
+  text-align: center;
+  top: 10%;
+  bottom: 50%;
+  position: relative;
+  right: 10%;
+}
+
+#pairsRemaining {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 20px;
+  color: #333;
+  text-align: center;
+  top: 14%;
+  bottom: 50%;
+  position: relative;
+  right: 10%;
+}
+
+#count {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 20px;
+  color: #333;
+  text-align: center;
+  top: 18%;
+  bottom: 50%;
+  position: relative;
+  right: 10%;
+}
+
+#start-screen {
+  width: 100%;
+  height: 100vh;
+  background-image: url(pokebackground.png);
+}
+
+#difficulty-screen {
+  background-color: purple;
+  width: 100%;
+  height: 100vh;
+  background-image: url(difficulty-screen-bigger.png);
+}
+
+.start {
+  background-color: black;
+  width: 25%;
+  border: none;
+  color: white;
+  padding: 30px 40px;
+  font-size: 16px;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  margin: 0;
+  position:absolute;
+  top: 50%;
+  bottom: 50%;
+  right: 0%;
+  
+}
+
+#difficulty-screen .easy {
+  background-color: #D1FFBD;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 12px;
+  margin: 3px 2px;
+  top: 50%;
+  bottom: 50%;
+  position: relative;
+  right: -2%;
+  
+}
+
+#difficulty-screen .medium {
+  background-color: lightgreen;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 12px;
+  margin: 3px 2px;
+  top: 50%;
+  bottom: 50%;
+  position: relative;
+  right: -35%;
+}
+
+#difficulty-screen .hard{
+  background-color: green;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 12px;
+  margin: 3px 2px;
+  top: 50%;
+  bottom: 50%;
+  position: relative;
+  right: -65%;
+}
+
+#game-screen .easy{
+  background-color: #D1FFBD;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 12px;
+  margin: 3px 2px;
+  top: 32%;
+  bottom: 50%;
+  position: relative;
+  right: -70%;
+}
+
+#game-screen .medium{
+  background-color: lightgreen;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 12px;
+  margin: 3px 2px;
+  top: 39%;
+  bottom: 50%;
+  position: relative;
+  right: -64.9%;
+}
+
+#game-screen .hard{
+  background-color: green;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 12px;
+  margin: 3px 2px;
+  top: 46%;
+  bottom: 50%;
+  position: relative;
+  right: -58.6%;
+}
+
+#game-screen .reset{
+  background-color: grey;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 2px;
+  margin: 3px 2px;
+  top: 90%;
+  bottom: 50%;
+  position: relative;
+  right: -54%;
+}
+
+#timer {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 20px;
+  color: white;
+  text-align: center;
+  top: 10%;
+  bottom: 50%;
+  position: relative;
+  right: -45%;
+  background-color: black;
+  width: 5%
+  
+  
+}
+
+#powerup {
+  background-color: brown;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 25px;
+  margin: 3px 2px;
+  top: 8%;
+  bottom: 50%;
+  position: relative;
+  right: -25%;
+}
+
+/*#powerup:hover {
+  background-color: black;
+  color: beige;
+}*/
+
+#black {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 20px 20px;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 100%;
+  margin: 3px 2px;
+  top: 20%;
+  bottom: 50%;
+  position: relative;
+  right: -21.6%;
+}
+
+#yellow {
+  background-color: yellow;
+  border: none;
+  color: white;
+  padding: 20px 20px;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 100%;
+  margin: 3px 2px;
+  top: 27%;
+  bottom: 50%;
+  position: relative;
+  right: -15.2%;
+}
+
+#purple {
+  background-color: purple;
+  border: none;
+  color: white;
+  padding: 20px 20px;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 100%;
+  margin: 3px 2px;
+  top: 34%;
+  bottom: 50%;
+  position: relative;
+  right: -18.4%;
+}
+
+#orange {
+  background-color: orange;
+  border: none;
+  color: white;
+  padding: 20px 20px;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 100%;
+  margin: 3px 2px;
+  top: 41%;
+  bottom: 50%;
+  position: relative;
+  right: -12.1%;
+}
+
+#green {
+  background-color: green;
+  border: none;
+  color: white;
+  padding: 20px 20px;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 100%;
+  margin: 3px 2px;
+  top: 48%;
+  bottom: 50%;
+  position: relative;
+  right: -8.95%;
+}
+
+.card {
+  width: 120px;
+  height: 160px;
+  perspective: 1000px;
+  box-sizing: border-box;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.card-inner {
+  transform: rotateY(0deg);
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.front_face,
+.back_face {
+  position: absolute;
+  backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+
+}
+
+
+.card.flip .card-inner {
+  transform: rotateY(180deg);
+}
+
+
+.front_face {
+  transform: rotateY(180deg);
+}
