@@ -1,5 +1,6 @@
 
 
+
 $(document).ready(() => {
   $("#start-screen").show();
   $(".start").on("click", () => {
@@ -32,7 +33,7 @@ $(".easy").on(("click"), function() {
   stopTimer();
   startGame(a,b);
   $("#powerup").on(("click"), function() {
-    powerup();
+    powerup(8);
     $("#powerup").off("click");
   })
 });
@@ -47,7 +48,7 @@ $(".medium").on(("click"), function() {
   stopTimer();
   startGame(a,b);
   $("#powerup").on(("click"), function() {
-    powerup();
+    powerup(16);
     $("#powerup").off("click");
   })
 });
@@ -62,17 +63,17 @@ $(".hard").on(("click"), function() {
   stopTimer();
   startGame(a,b);
   $("#powerup").on(("click"), function() {
-    powerup();
+    powerup(24);
     $("#powerup").off("click");
   })
 });
 $(".reset").on(("click"), function() {
   stopTimer();
   startGame(a,b);
-  $("#powerup").on(("click"), function() {
+ /* $("#powerup").on(("click"), function() {
     powerup();
     $("#powerup").off("click");
-  })
+  })*/
   });
 $("#victory_page .reset").on(("click"), function() {
   $("#difficulty-screen").show();
@@ -82,10 +83,6 @@ $("#losing_page .reset").on(("click"), function() {
   $("#difficulty-screen").show();
   $("#losing_page").hide();
 })
-$("#powerup").on(("click"), function() {
-  powerup();
-  $("#powerup").off("click");
-  });
 $("#black").on(("click"), function() {
   $("#game_grid").css("background-color", "black");
 });
@@ -133,12 +130,21 @@ function matchedAndUnmatched(p, q) {
   document.getElementById("pairsRemaining").textContent = `Pairs Remaining: ${q - p}`;
 }
 
-function powerup() {
-  $(".card").addClass("flip");
-
+function powerup(s) {
+  for(let i = 0; i < s; i++) {
+  if ($(".card").eq(i).hasClass("flip")) {
+    $(".card").eq(i).removeClass("flip");
   setTimeout(() => {
-    $(".card").removeClass("flip");
+    $(".card").eq(i).addClass("flip")
   }, 3000);
+}
+else {
+  $(".card").eq(i).addClass("flip");
+  setTimeout(() => {
+    $(".card").eq(i).removeClass("flip")
+  }, 3000);
+}
+}
 }
 
 function victoryMessage() {
@@ -211,6 +217,7 @@ function generateCards(cards) {
     <img class="back_face" src="${card.back}" alt="Card Back">
     </div>
     `;
+
     
     gameboard.appendChild(cardElement);
   });
@@ -281,3 +288,4 @@ function setup (j) {
 });
 });
 //$(document).ready(setup)
+
